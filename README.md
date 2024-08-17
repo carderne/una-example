@@ -37,6 +37,7 @@ rye run test
 rye run all
 ```
 
+## Building
 Build wheels (outputs to `dist/`):
 ```bash
 rye run build
