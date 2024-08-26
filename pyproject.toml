@@ -8,33 +8,24 @@ all = { chain = ["fmt", "lint", "check", "test"] }
 build = "rye build --all"
 
 [project]
-name = "una-example-packages"
+name = "una-example"
 version = "0.1.0"
-description = "una example monorepo"
-authors = [
-    { name = "Chris Arderne", email = "chris@rdrn.me" }
-]
-dependencies = []
-readme = "README.md"
 requires-python = ">= 3.11"
 
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "una>=0.1.2",
+    "una>=0.3.0",
     "basedpyright>=1.16.0",
     "pytest>=8.3.2",
 ]
 virtual = true
 
 [tool.rye.workspace]
-member = ["apps/*", "libs/*"]
-
-[tool.hatch.metadata]
-allow-direct-references = true
+members = ["apps/*", "libs/*"]
 
 [tool.una]
-style = "packages"
+members = ["apps/*", "libs/*"]
 
 [tool.ruff]
 line-length = 100
@@ -43,7 +34,7 @@ line-length = 100
 select = ["A", "E", "F", "I", "N", "T100"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["una_example_packages"]
+known-first-party = ["una_example"]
 
 [tool.pytest.ini_options]
 pythonpath = [

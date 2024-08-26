@@ -16,6 +16,7 @@ click==8.1.7
     # via typer
 cowsay-python==1.0.2
     # via greeter
+    # via printer
 dataclasses-json==0.6.7
     # via una
 iniconfig==2.0.0
@@ -52,4 +53,4 @@ typing-extensions==4.12.2
     # via typing-inspect
 typing-inspect==0.9.0
     # via dataclasses-json
-una==0.1.2
+una==0.3.0

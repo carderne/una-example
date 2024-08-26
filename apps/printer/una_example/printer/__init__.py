@@ -1,4 +1,4 @@
-import una_example_packages.greeter as greeter
+from una_example import greeter
 
 
 def run() -> None:

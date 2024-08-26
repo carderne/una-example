@@ -13,3 +13,4 @@
 -e file:libs/greeter
 cowsay-python==1.0.2
     # via greeter
+    # via printer

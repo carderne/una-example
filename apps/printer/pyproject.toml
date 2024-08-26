@@ -8,7 +8,7 @@ requires-python = ">= 3.11"
 dynamic = ["una"]  # needed for hatch-una metadata hook to work
 
 [build-system]
-requires = ["hatchling", "hatch-una"]
+requires = ["hatchling", "hatch-una>=0.3.0"]
 build-backend = "hatchling.build"
 
 [tool.hatch.metadata]
@@ -21,8 +21,8 @@ dev-dependencies = []
 [tool.hatch.build.hooks.una-build]
 [tool.hatch.metadata.hooks.una-meta]
 
-[tool.una.libs]
-"../../libs/greeter/una_example_packages/greeter" = "una_example_packages/greeter"
+[tool.una.deps]
+"../../libs/greeter/una_example/greeter" = "una_example/greeter"
 
 [tool.pyright]
 venvPath = "../.."

@@ -1,4 +1,4 @@
-from una_example_packages import greeter
+from una_example import greeter
 
 
 def test_import():

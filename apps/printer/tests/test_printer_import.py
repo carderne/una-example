@@ -1,4 +1,4 @@
-from una_example_packages import printer
+from una_example import printer
 
 
 def test_import():

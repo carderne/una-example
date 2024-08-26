@@ -1,16 +1,15 @@
-# una-example-packages
+# una-example
 
-This is an example of an [una](https://github.com/carderne/una) monorepo using the Packages style.
+This is an example of an [una](https://github.com/carderne/una) monorepo.
 
 Read more about una:
 - [Official docs](https://una.rdrn.me/)
-- [Official docs on the Packages style](https://una.rdrn.me/style-packages/)
 
 ## About
 This repository is basically the result of the following steps:
 ```bash
-rye init una-example-packages
-cd una-example-packages
+rye init una-example
+cd una-example
 rye add --dev una
 rye run una create workspace
 rye sync
