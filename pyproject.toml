@@ -8,9 +8,6 @@ dev-dependencies = [
 [tool.uv.workspace]
 members = ["apps/*", "libs/*"]
 
-[tool.una]
-members = ["apps/*", "libs/*"]
-
 [tool.ruff]
 line-length = 100
 
