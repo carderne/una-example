@@ -41,3 +41,20 @@ Build wheels (outputs to `dist/`):
 ```bash
 make build
 ```
+
+## Docker
+```bash
+docker build --tag una-example .
+docker run --rm -it una-example python -c 'from una_example.printer import run; run()'
+
+┌────────────────┐
+│Hello from una! │
+└────────────────┘
+               \
+                \
+                  ^__^
+                  (oo)\_______
+                  (__)\       )\/\
+                      ||----w |
+                      ||     ||
+```

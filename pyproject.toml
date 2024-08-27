@@ -8,6 +8,10 @@ dev-dependencies = [
 [tool.uv.workspace]
 members = ["apps/*", "libs/*"]
 
+[tool.una]
+namespace = "una_example"
+requires-python = ">=3.12"
+
 [tool.ruff]
 line-length = 100
 
