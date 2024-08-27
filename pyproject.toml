@@ -1,27 +1,11 @@
-[tool.rye.scripts]
-fmt = "rye fmt"
-lint = "rye lint --fix"
-check = "basedpyright"
-test = "rye test"
-all = { chain = ["fmt", "lint", "check", "test"] }
-
-build = "rye build --all"
-
-[project]
-name = "una-example"
-version = "0.1.0"
-requires-python = ">= 3.11"
-
-[tool.rye]
-managed = true
+[tool.uv]
 dev-dependencies = [
     "una>=0.3.0",
     "basedpyright>=1.16.0",
     "pytest>=8.3.2",
 ]
-virtual = true
 
-[tool.rye.workspace]
+[tool.uv.workspace]
 members = ["apps/*", "libs/*"]
 
 [tool.una]

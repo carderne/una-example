@@ -8,13 +8,14 @@ Read more about una:
 ## About
 This repository is basically the result of the following steps:
 ```bash
-rye init una-example
+uv init una-example
 cd una-example
-rye add --dev una
-rye run una create workspace
-rye sync
-rye run una sync
-rye add --dev basedpyright pytest
+git init
+uv add --dev una
+uv run una create workspace
+uv sync
+uv run una sync
+uv add --dev basedpyright pytest
 ```
 
 And then some extra settings added to all the `pyproject.toml` files to get Pyright and Pytest to play nice.
@@ -22,22 +23,21 @@ And then some extra settings added to all the `pyproject.toml` files to get Pyri
 ## Commands
 Sync the una dependency graph (that is, resolve all dependencies between packages in the monorepo):
 ```bash
-rye run una sync
+uv run una sync
 ```
 
 Formatting, linting etc (these are specified at the top of the root [pyproject.toml](./pyproject.toml)).
 ```bash
-rye run fmt
-rye run lint
-rye run check
-rye run test
+make fmt
+make lint
+make check
+make test
 
-# or just
-rye run all
+make all
 ```
 
 ## Building
 Build wheels (outputs to `dist/`):
 ```bash
-rye run build
+make build
 ```

@@ -14,8 +14,7 @@ build-backend = "hatchling.build"
 [tool.hatch.metadata]
 allow-direct-references = true
 
-[tool.rye]
-managed = true
+[tool.uv]
 dev-dependencies = []
 
 [tool.hatch.build.hooks.una-build]
