@@ -7,6 +7,9 @@ dependencies = ["greeter"]
 requires-python = ">= 3.11"
 dynamic = ["una"]  # needed for hatch-una metadata hook to work
 
+[project.scripts]
+una_printer = "una_example.printer:run"
+
 [build-system]
 requires = ["hatchling", "hatch-una>=0.5.1"]
 build-backend = "hatchling.build"
@@ -15,9 +18,7 @@ build-backend = "hatchling.build"
 allow-direct-references = true
 
 [tool.uv]
-dev-dependencies = [
-    "hatchling>=1.25.0",
-]
+dev-dependencies = []
 
 [tool.uv.sources]
 greeter = { workspace = true }

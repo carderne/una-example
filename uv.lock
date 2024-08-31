@@ -5,12 +5,7 @@ requires-python = ">=3.11"
 members = [
     "greeter",
     "printer",
-]
-requirements = [
-    { name = "basedpyright", specifier = ">=1.16.0" },
-    { name = "pytest", specifier = ">=8.3.2" },
-    { name = "ruff", specifier = ">=0.6.2" },
-    { name = "una", specifier = ">=0.3.0" },
+    "una-example",
 ]
 
 [[package]]
@@ -78,21 +73,6 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "cowsay-python", specifier = "==1.0.2" }]
-
-[[package]]
-name = "hatchling"
-version = "1.25.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "pathspec" },
-    { name = "pluggy" },
-    { name = "trove-classifiers" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/a3/51/8a4a67a8174ce59cf49e816e38e9502900aea9b4af672d0127df8e10d3b0/hatchling-1.25.0.tar.gz", hash = "sha256:7064631a512610b52250a4d3ff1bd81551d6d1431c4eb7b72e734df6c74f4262", size = 64632 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/8b/90e80904fdc24ce33f6fc6f35ebd2232fe731a8528a22008458cf197bc4d/hatchling-1.25.0-py3-none-any.whl", hash = "sha256:b47948e45d4d973034584dd4cb39c14b6a70227cf287ab7ec0ad7983408a882c", size = 84077 },
-]
 
 [[package]]
 name = "iniconfig"
@@ -169,15 +149,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pathspec"
-version = "0.12.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz", hash = "sha256:a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712", size = 51043 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
-]
-
-[[package]]
 name = "pluggy"
 version = "1.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -194,16 +165,8 @@ dependencies = [
     { name = "greeter" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "hatchling" },
-]
-
 [package.metadata]
 requires-dist = [{ name = "greeter", editable = "libs/greeter" }]
-
-[package.metadata.requires-dev]
-dev = [{ name = "hatchling", specifier = ">=1.25.0" }]
 
 [[package]]
 name = "pygments"
@@ -286,15 +249,6 @@ wheels = [
 ]
 
 [[package]]
-name = "trove-classifiers"
-version = "2024.7.2"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/78/c9/83f915c3f6f94f4c862c7470284fd714f312cce8e3cf98361312bc02493d/trove_classifiers-2024.7.2.tar.gz", hash = "sha256:8328f2ac2ce3fd773cbb37c765a0ed7a83f89dc564c7d452f039b69249d0ac35", size = 16071 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0f/b0/09794439a62a7dc18bffdbf145aaf50297fd994890b11da27a13e376b947/trove_classifiers-2024.7.2-py3-none-any.whl", hash = "sha256:ccc57a33717644df4daca018e7ec3ef57a835c48e96a1e71fc07eb7edac67af6", size = 13468 },
-]
-
-[[package]]
 name = "typer"
 version = "0.12.5"
 source = { registry = "https://pypi.org/simple" }
@@ -344,4 +298,27 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/6f/b6/33d6210fe948ebdb35f92ea1b15d8e466c5450e1690b517525d4e9f1020d/una-0.3.1.tar.gz", hash = "sha256:a3abba0ba5d09d3fa1f9014d4fed73486a59d736602810b3c99c2f712778d70d", size = 26608 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ef/12/fcbd1edd1ac95e2bb882db17c9e52d2480b0cf5f9044c2b1a5f98e5b4b92/una-0.3.1-py3-none-any.whl", hash = "sha256:4d8dd248006f9cbf899c58cf65f02dcd0fcc5621c541def86b87a0a0f6839ff4", size = 17358 },
+]
+
+[[package]]
+name = "una-example"
+version = "0.1"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "basedpyright" },
+    { name = "pytest" },
+    { name = "ruff" },
+    { name = "una" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "basedpyright", specifier = ">=1.16.0" },
+    { name = "pytest", specifier = ">=8.3.2" },
+    { name = "ruff", specifier = ">=0.6.2" },
+    { name = "una", specifier = ">=0.3.0" },
 ]
