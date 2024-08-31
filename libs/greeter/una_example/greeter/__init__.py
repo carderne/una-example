@@ -1,5 +1,5 @@
 import cowsay
 
 
-def greet() -> str:
-    return cowsay.say("Hello from una!")
+def greet(msg: str) -> str:
+    return cowsay.say(msg)

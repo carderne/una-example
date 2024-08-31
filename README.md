@@ -1,5 +1,7 @@
 # una-example
 
+**NB: This is currently slightly broken due to uv's new behaviour in 0.4.0. Waiting to figure out the best way forward.**
+
 This is an example of an [una](https://github.com/carderne/una) monorepo.
 
 Read more about una:
@@ -44,11 +46,16 @@ make build
 
 ## Docker
 ```bash
-docker build --tag una-example .
-docker run --rm -it una-example python -c 'from una_example.printer import run; run()'
+make build-docker
+docker run --rm -p 8000:8000 -it example
+```
+
+Then curl the running server:
+```
+$ curl localhost:8000
 
 ┌────────────────┐
-│Hello from una! │
+│Hello from Una! │
 └────────────────┘
                \
                 \
