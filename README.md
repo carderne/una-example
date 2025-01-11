@@ -1,8 +1,8 @@
 # una-example
 
-**NB: This is currently slightly broken due to uv's new behaviour in 0.4.0. Waiting to figure out the best way forward.**
+**⏸️ Project paused: This doesn't seem to be necessary any longer.**
 
-This is an example of an [una](https://github.com/carderne/una) monorepo.
+See the explanation at the [carderne/una](https://github.com/carderne/una) repo.
 
 Read more about una:
 - [Official docs](https://una.rdrn.me/)
