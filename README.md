@@ -1,8 +1,11 @@
 # una-example
 
-**⏸️ Project paused: This doesn't seem to be necessary any longer.**
+This is an example of an [una](https://github.com/carderne/una) monorepo.
 
-See the explanation at the [carderne/una](https://github.com/carderne/una) repo.
+What this is for:
+- [uv](https://docs.astral.sh/uv/) is the best way to use Python, and it has some monorepo/workspace support.
+- If your build artifacts are Dockerfiles, uv is probably enough.
+- But if you want to build Python wheels or similar in monorepos, read on!
 
 Read more about una:
 - [Official docs](https://una.rdrn.me/)
